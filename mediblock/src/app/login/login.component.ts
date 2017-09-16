@@ -15,4 +15,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
+  login() {
+    document.getElementById('login').style.display = 'none';
+  }
 }
