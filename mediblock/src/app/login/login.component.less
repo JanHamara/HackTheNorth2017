@@ -12,16 +12,33 @@
   }
 
   h1 {
+    color: @main-dark-font-color;
     .p-center;
     top: 35%;
     opacity: 0.8;
   }
 
   form {
+    color: @main-font-color;
+    width: 30%;
     .p-center;
+    top: 68%;
+    z-index: 3;
 
     input {
+      color: @main-dark-font-color;
       display: block;
+      width: 100%;
+      margin: 10% auto;
+      padding: 5%;
+      background: none;
+      border: none;
+      border-bottom: 1px @main-font-color solid;
+      .align;
+
+      &:focus {
+        outline: none;
+      }
     }
   }
 }

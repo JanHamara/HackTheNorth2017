@@ -47,7 +47,7 @@ body,
 html {
   width: 100%;
   height: 100%;
-  background-image: url("assets/background.png");
+  background-image: url("assets/background2.png");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -127,7 +127,8 @@ html {
   left: 50%;
   transform: translate(-50%, -50%);
   top: 56%;
-  opacity: 0.8;
+  color: rgba(50, 50, 50, 0.6);
+  z-index: 2;
 }
 .container-fluid #splashscreen img {
   position: absolute;
@@ -138,6 +139,7 @@ html {
   display: block;
   width: 18%;
   opacity: 0.9;
+  z-index: 2;
 }
 .container-fluid #splashscreen .loader {
   width: 40%;
@@ -168,4 +170,5 @@ html {
   opacity: 0;
   animation: showlogin 1s forwards;
   animation-delay: 4s;
+  z-index: 2;
 }
