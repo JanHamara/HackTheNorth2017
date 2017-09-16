@@ -1,0 +1,84 @@
+@import '../styles';
+
+// Animations
+// ----------------------------------------------------------------
+
+@-webkit-keyframes splash {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  10% {
+    display: block;
+    opacity: 1;
+  }
+  90% {
+    display: block;
+    opacity: 1;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+
+@keyframes splash {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  10% {
+    display: block;
+    opacity: 1;
+  }
+  90% {
+    display: block;
+    opacity: 1;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+
+//-------------------------------------------------------
+
+#splashscreen {
+  .fullsize;
+  position: relative;
+  animation: splash 4s forwards;
+
+  h1 {
+    .p-center;
+    top: 56%;
+    opacity: 0.8;
+  }
+
+  img {
+    .p-center;
+    top: 44%;
+    display: block;
+    width: 18%;
+    opacity: 0.9;
+  }
+
+  .loader {
+    width: 40%;
+    height: 0.3em;
+    border-radius: 7px;
+    background: rgba(255, 255, 255, 0.2);
+    .p-center;
+    top: 80%;
+  }
+
+  .loader-progress {
+    width: 0%;
+    height: 0.3em;
+    border-radius: 7px;
+    background: rgba(255, 255, 255, 0.9);
+    .p-center;
+    top: 80%;
+    animation: load 3s forwards;
+  }
+
+}
