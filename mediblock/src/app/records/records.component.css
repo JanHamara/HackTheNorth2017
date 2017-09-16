@@ -60,3 +60,9 @@ html {
   width: 100%;
   height: 100%;
 }
+#records .record-item {
+  width: 90%;
+  height: 5%;
+  border: 1px rgba(255, 255, 255, 0.9) solid;
+  padding: 1%;
+}

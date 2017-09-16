@@ -56,9 +56,6 @@ html {
   color: rgba(255, 255, 255, 0.9);
   z-index: -2;
 }
-div {
-  outline: 1px red solid;
-}
 .header {
   height: 15%;
 }
@@ -68,4 +65,5 @@ div {
 .patient-content .patient-record,
 .patient-content .patient-data {
   height: 100%;
+  margin-top: 2%;
 }

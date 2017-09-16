@@ -1,3 +1,11 @@
 <div id="records">
-
+  <div *ngIf="records">
+    <ul *ngFor="let record of records" class="list-unstyled">
+    <li>
+      <div class="record-item">
+        {{ record.name }}
+      </div>
+    </li>
+    </ul>
+  </div>
 </div>
