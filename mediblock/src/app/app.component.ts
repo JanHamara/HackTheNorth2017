@@ -74,7 +74,7 @@ export class AppComponent implements OnInit {
           'enable': true,
           'distance': 150,
           'color': '#eeeeee',
-          'opacity': 0.7,
+          'opacity': 0.4,
           'width': 1
         },
         'move': {
