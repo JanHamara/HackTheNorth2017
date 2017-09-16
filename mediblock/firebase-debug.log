@@ -1,0 +1,33 @@
+[debug] [2017-09-16T21:47:44.395Z] ----------------------------------------------------------------------
+[debug] [2017-09-16T21:47:44.397Z] Command:      /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2017-09-16T21:47:44.398Z] CLI Version:  3.9.1
+[debug] [2017-09-16T21:47:44.398Z] Platform:     darwin
+[debug] [2017-09-16T21:47:44.398Z] Node Version: v6.11.0
+[debug] [2017-09-16T21:47:44.399Z] Time:         Sat Sep 16 2017 17:47:44 GMT-0400 (EDT)
+[debug] [2017-09-16T21:47:44.399Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-09-16T21:47:44.416Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-09-16T21:47:44.417Z] > authorizing via signed-in user
+[debug] [2017-09-16T21:47:44.420Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-09-16T21:47:44.420Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/HnewBn-PDjtAEXpP0-vRQ6Gk2HOUWhSji4hUhMx80RQ',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sat Sep 16 2017 17:47:44 GMT-0400 (EDT)
+[debug] [2017-09-16T21:47:46.505Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-16T21:47:46.523Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/medlink-43c79  
+ Sat Sep 16 2017 17:47:46 GMT-0400 (EDT)
+[debug] [2017-09-16T21:47:47.353Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-16T21:47:47.355Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/medlink-43c79/tokens  
+ Sat Sep 16 2017 17:47:47 GMT-0400 (EDT)
+[debug] [2017-09-16T21:47:48.377Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'medlink-43c79'...
+[info] 
+[info] i  deploying hosting
+[info] i  hosting: preparing dist directory for upload...
+[debug] [2017-09-16T21:47:49.835Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/medlink-43c79/uploads/-KuBeNNsHwhGkQ0OXU_i?fileCount=17&message=  
+ Sat Sep 16 2017 17:47:49 GMT-0400 (EDT)
+[debug] [2017-09-16T21:47:53.945Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-16T21:47:53.946Z] [hosting] .tgz uploaded successfully, waiting for extraction
