@@ -1,13 +1,14 @@
 <div class="container-fluid">
+  <div id="login-form">
   <img src="../../assets/medilink2_logo_white.png" class="img-responsive" alt="medlink_logo">
   <h1 class="text-center">medlink</h1>
-
   <form>
   <input type="text" name="username" [(ngModel)]="username" placeholder="Doctor ID"/>
   <input type="password" name="password" [(ngModel)]="password" placeholder="Password" />
   </form>
-
   <a class="text-center" routerLink="/dashboard" routerLinkActive="active" (click)="login()"><i class="fa fa-circle-thin"></i></a>
+  </div>
+  <router-outlet></router-outlet>
 </div>
 
 

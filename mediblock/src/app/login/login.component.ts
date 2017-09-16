@@ -16,6 +16,6 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    document.getElementById('login').style.display = 'none';
+    document.getElementById('login-form').style.display = 'none';
   }
 }
