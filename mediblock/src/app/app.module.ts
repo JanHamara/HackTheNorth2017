@@ -7,6 +7,8 @@ import { ParticlesModule } from 'angular-particle';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {RouterModule, Routes} from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
+import { RecordsComponent } from './records/records.component';
+import { ProfileDataComponent } from './profile-data/profile-data.component';
 
 const appRoutes: Routes = [
   { path: 'dashboard', component: DashboardComponent }
@@ -17,7 +19,9 @@ const appRoutes: Routes = [
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    NavbarComponent
+    NavbarComponent,
+    RecordsComponent,
+    ProfileDataComponent
   ],
   imports: [
     BrowserModule,
