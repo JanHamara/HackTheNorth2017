@@ -1,9 +1,11 @@
 <div id="records">
   <div *ngIf="records">
-    <ul *ngFor="let record of records" class="list-unstyled">
-    <li>
-      <div class="record-item">
-        {{ record.name }}
+    <ul class="list-unstyled">
+    <li *ngFor="let record of records">
+      <div class="record-item row">
+
+          <img src="../../assets/records/control.png" class="img-responsive" alt="control-icon">
+          {{ record }}
       </div>
     </li>
     </ul>

@@ -61,8 +61,13 @@ html {
   height: 100%;
 }
 #records .record-item {
-  width: 90%;
+  width: 100%;
   height: 5%;
   border: 1px rgba(255, 255, 255, 0.9) solid;
-  padding: 1%;
+  border-radius: 7px;
+  padding: 3%;
+}
+#records .record-item img {
+  color: #66eecc;
+  width: 5%;
 }

@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-root',
@@ -6,12 +7,17 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent implements OnInit {
+  records: FirebaseListObservable<any[]>;
   style: object = {};
   params: object = {};
   width = 100;
   height = 100;
 
+  constructor() {
+  }
+
   ngOnInit() {
+
     this.style = {
       'position': 'fixed',
       'width': '100%',

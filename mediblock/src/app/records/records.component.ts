@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpService} from '../shared/http-service/http.service';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-records',
@@ -6,19 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./records.component.less']
 })
 export class RecordsComponent implements OnInit {
-  records: Object[] = [];
-  constructor() { }
+  recordsObservable: FirebaseListObservable<any[]>;
+  records: any;
+
+  constructor(private httpService: HttpService, db: AngularFireDatabase) {
+    this.recordsObservable = db.list('/patients');
+  }
 
   ngOnInit() {
-    this.records = [
-      {id: 1, cat: 'control', name: 'Annual eyesight control', date: '18/08/2017',
-        time: '14:22', place: 'St.Mary Clinic, London'},
-      {id: 2, cat: 'illness', name: 'Hay Fever', date: '24/05/2017',
-        time: '09:56', place: 'GP / High Street, London'},
-      {id: 3, cat: 'vaccine', name: 'MIT Vaccination', date: '09/04/2017',
-        time: '12:00', place: 'GP / High Street, London'}
-    ];
-    console.log(this.records);
+    this.recordsObservable.subscribe((response) => {
+      this.records = response;
+      console.log(this.records);
+  });
   }
 
 }

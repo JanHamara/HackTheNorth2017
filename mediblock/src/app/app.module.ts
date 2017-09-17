@@ -9,6 +9,11 @@ import {RouterModule, Routes} from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RecordsComponent } from './records/records.component';
 import { ProfileDataComponent } from './profile-data/profile-data.component';
+import {HttpModule} from '@angular/http';
+import { AngularFireModule } from 'angularfire2';
+import { environment } from '../environments/environment';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
 const appRoutes: Routes = [
   { path: 'dashboard', component: DashboardComponent }
@@ -27,10 +32,14 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     ParticlesModule,
+    HttpModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
-    )
+    ),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule, // imports firebase/database, only needed for database features
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

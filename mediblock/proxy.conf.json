@@ -1,0 +1,6 @@
+{
+  "/api": {
+    "target": "https://medlink-43c79.firebaseio.com",
+    "secure": false
+  }
+}

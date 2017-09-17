@@ -99,6 +99,9 @@ nav .add-button {
   display: inline-block;
   background: none;
 }
+nav .add-button .fa-plus {
+  padding-right: 8%;
+}
 nav .profile-button {
   width: 10%;
   display: inline-block;
