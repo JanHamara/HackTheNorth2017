@@ -2,10 +2,16 @@
   <div *ngIf="records">
     <ul class="list-unstyled">
     <li *ngFor="let record of records">
-      <div class="record-item row">
-
-          <img src="../../assets/records/control.png" class="img-responsive" alt="control-icon">
-          {{ record }}
+      <div class="record-item">
+        <div class="record-content row">
+            <div class="col-lg-2">
+              <img src="../../assets/records/control.png" class="img-responsive" alt="control-icon">
+            </div>
+          <div class="col-lg-10 record-info">
+            <h3>{{ record.name }} <span class="pull-right">{{ record.place }}</span></h3>
+            <span>{{ record.date }} | {{ record.time }}</span>
+          </div>
+        </div>
       </div>
     </li>
     </ul>

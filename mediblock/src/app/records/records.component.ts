@@ -11,13 +11,12 @@ export class RecordsComponent implements OnInit {
   records: any;
 
   constructor(db: AngularFireDatabase) {
-    this.recordsObservable = db.list('/patients');
+    this.recordsObservable = db.list('/patients/0019203847528/records');
   }
 
   ngOnInit() {
     this.recordsObservable.subscribe((response) => {
       this.records = response;
-      console.log(this.records);
   });
   }
 

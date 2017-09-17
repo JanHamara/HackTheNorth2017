@@ -63,11 +63,42 @@ html {
 #records .record-item {
   width: 100%;
   height: 5%;
+  background: rgba(255, 255, 255, 0.1);
   border: 1px rgba(255, 255, 255, 0.9) solid;
   border-radius: 7px;
-  padding: 3%;
+  padding: 1%;
+  margin-bottom: 2%;
 }
-#records .record-item img {
-  color: #66eecc;
-  width: 5%;
+#records .record-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+#records .record-item .record-content {
+  width: 100%;
+  height: 100%;
+  min-height: 5em;
+  margin: auto;
+}
+#records .record-item .record-content img {
+  width: 50%;
+  margin: 10% auto;
+}
+#records .record-item .record-content .record-info {
+  height: 100%;
+  padding-left: 5%;
+  border-left: 1px rgba(255, 255, 255, 0.9) solid;
+}
+#records .record-item .record-content .record-info h3 {
+  margin: 0%;
+  padding: 0%;
+  font-size: 140%;
+  margin: 2% 0%;
+  letter-spacing: 0.1em;
+}
+#records .record-item .record-content .record-info h3 span {
+  font-size: 70%;
+  opacity: 0.8;
+}
+#records .record-item .record-content .record-info span {
+  opacity: 0.8;
 }
