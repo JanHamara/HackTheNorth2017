@@ -2,7 +2,7 @@
   <div *ngIf="records" class="fadeInUp animated">
     <ul class="list-unstyled">
     <li *ngFor="let record of records">
-      <div class="record-item">
+      <div class="record-item" (click)="openRecord()">
         <div class="record-content row">
             <div class="col-lg-2">
               <img src="../../assets/records/control.png" class="img-responsive" alt="control-icon">

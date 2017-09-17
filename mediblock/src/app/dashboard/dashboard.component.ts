@@ -17,11 +17,14 @@ export class DashboardComponent implements OnInit {
   newPatientId: any;
 
   recordsObservable: FirebaseListObservable<any[]>;
+  reportObservable: FirebaseListObservable<any[]>;
   records: any;
+  report: any;
 
 
   constructor(public db: AngularFireDatabase, private modalService: BsModalService) {
     this.recordsObservable = db.list('/patients');
+    this.reportObservable = db.list('/patients/0019203847528');
   }
 
   ngOnInit() {
@@ -30,6 +33,11 @@ export class DashboardComponent implements OnInit {
       this.records.forEach((record) => {
         this.patients.push(record.patientData.firstName);
       });
+    });
+
+    this.reportObservable.subscribe((response) => {
+      this.report = response;
+      console.log('Repoooort:', this.report[0]);
     });
   }
 
@@ -64,5 +72,9 @@ export class DashboardComponent implements OnInit {
     const patientsArray = this.db.list('/patients/' + this.newPatientId);
     patientsArray.push({patientData: '', records: ''});
     this.closeAddPatient();
+  }
+
+  closeReport() {
+
   }
 }
