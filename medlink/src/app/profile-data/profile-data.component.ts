@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import {AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable} from 'angularfire2/database';
 
 @Component({
   selector: 'app-profile-data',
@@ -17,8 +17,18 @@ export class ProfileDataComponent implements OnInit {
   ngOnInit() {
     this.recordsObservable.subscribe((response) => {
       this.record = response;
-      console.log('wefwef: ', this.record);
     });
+  }
+
+  openReportForm() {
+    document.getElementById('patient-content').style.display = 'none';
+    document.getElementById('reportform').style.display = 'block';
+  }
+
+
+  closeAddPatient() {
+    document.getElementById('add-patient').style.display = 'none';
+    document.getElementById('patient-content').style.display = 'block';
   }
 
 }

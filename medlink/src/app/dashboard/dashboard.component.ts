@@ -1,7 +1,7 @@
 import {Component, OnInit, TemplateRef} from '@angular/core';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/modal-options.class';
-import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
+import {AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable} from 'angularfire2/database';
 
 @Component({
   selector: 'app-dashboard',
@@ -20,11 +20,12 @@ export class DashboardComponent implements OnInit {
   reportObservable: FirebaseListObservable<any[]>;
   records: any;
   report: any;
-
+  patientsArray: FirebaseObjectObservable<any[]>;
 
   constructor(public db: AngularFireDatabase, private modalService: BsModalService) {
     this.recordsObservable = db.list('/patients');
     this.reportObservable = db.list('/patients/0019203847528');
+    this.patientsArray = db.object('patients/0019203847528/records/1');
   }
 
   ngOnInit() {
@@ -57,6 +58,28 @@ export class DashboardComponent implements OnInit {
     }
   }
 
+  addRecordP() {
+    this.closeReportForm();
+    this.patientsArray.set(
+      {
+        category: 'control',
+        data: {
+          bloodpressure: '90',
+          breath: '',
+          diagnosis: 'The patient came with moderate belly pain and slightly raises temperature. ' +
+          'According to related insomnia, setting up 3 days of medication with antihistaminics and sleep pills. ' +
+          'HackTheNorth is cool btw ;)',
+          extSymptoms: 'none',
+          intSymptoms: 'belly pain',
+          pulse: '120/70'
+        },
+        date: '12/06/2016',
+        name: 'Belly Pain Control',
+        place: 'GP / High Street', time: '12:34'
+      }
+    );
+  }
+
   addPatient() {
     document.getElementById('add-patient').style.display = 'block';
     document.getElementById('patient-content').style.display = 'none';
@@ -77,5 +100,11 @@ export class DashboardComponent implements OnInit {
   closeReport() {
     document.getElementById('patient-content').style.display = 'block';
     document.getElementById('report').style.display = 'none';
+  }
+
+
+  closeReportForm() {
+    document.getElementById('patient-content').style.display = 'block';
+    document.getElementById('reportform').style.display = 'none';
   }
 }

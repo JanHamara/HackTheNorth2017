@@ -222,6 +222,69 @@
       }
     }
   }
+
+  #reportform {
+    display: none;
+    .p-center;
+    top: 90%;
+    width: 97%;
+    height: auto;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px @main-font-color solid;
+    border-radius: 7px;
+    padding: 3%;
+
+    input {
+      color: @main-dark-font-color;
+    }
+
+    #clickme {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px @main-font-color solid;
+      border-radius: 7px;
+      padding: 3%;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.3);
+        cursor:pointer;
+
+      }
+    }
+
+    .absolute {
+      position: relative;
+      .fullsize;
+      text-align: center;
+
+      i.fa-close {
+        .p-center;
+        top: 1%;
+        left: 99%;
+        font-size: 140%;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    table {
+      background: rgba(255, 255, 255, 0.1);
+      width: 90%;
+      margin: auto;
+      margin-top: 5%;
+      font-size: 130%;
+
+      th, td {
+        text-align: center;
+        padding: 1%;
+      }
+
+      th {
+        background: rgba(255, 255, 255, 0.2);;
+      }
+    }
+  }
 }
 
 
