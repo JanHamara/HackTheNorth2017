@@ -7,16 +7,23 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
   styleUrls: ['./app.component.less']
 })
 export class AppComponent implements OnInit {
-  records: FirebaseListObservable<any[]>;
   style: object = {};
   params: object = {};
   width = 100;
   height = 100;
 
-  constructor() {
+  recordsObservable: FirebaseListObservable<any[]>;
+  records: any;
+
+  constructor(db: AngularFireDatabase) {
+    this.recordsObservable = db.list('/patients');
   }
 
   ngOnInit() {
+    this.recordsObservable.subscribe((response) => {
+      this.records = response;
+      console.log('uuuuu: ', this.records);
+    });
 
     this.style = {
       'position': 'fixed',

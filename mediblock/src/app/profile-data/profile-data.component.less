@@ -1,0 +1,65 @@
+@import '../../styles';
+
+// ----------------------------------------------------------------
+
+.profile-data {
+  .fullsize;
+  height: 80%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px @main-font-color solid;
+  border-radius: 7px;
+  padding: 1%;
+
+  img {
+    display: block;
+    width: 30%;
+    margin: auto;
+    opacity: 0.8;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  h2 {
+    border-bottom: 1px @main-font-color solid;
+    width: 80%;
+    margin: auto;
+    padding-bottom: 5%;
+  }
+
+  div {
+    text-align: center;
+    margin: 8% auto;
+  }
+
+  span {
+    display: block;
+    margin-bottom: 2%;
+  }
+}
+
+.add-record {
+  width: 50%;
+  height: 10%;
+  margin: 4% auto;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px @main-font-color solid;
+  border-radius: 7px;
+  padding: 1%;
+  position: relative;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+  }
+
+  span {
+    width: 100%;
+    text-align: center;
+    display: block;
+    .p-center;
+
+    .fa-plus {
+      margin-right: 2%;
+    }
+  }
+}

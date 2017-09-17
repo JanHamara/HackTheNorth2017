@@ -1,3 +1,14 @@
-<p>
-  profile-data works!
-</p>
+<div class="profile-data fadeIn animated text-center">
+  <img [src]="record[0].img" class="img-responsive img-circle" alt="patient-photo">
+  <h2>{{ record[0].firstName }} {{ record[0].secondName }}</h2>
+  <div>
+    <span><strong>NIN:</strong> {{ record[0].NIN }}</span>
+    <span><strong>DoB:</strong> {{ record[0].dob }}</span><br/>
+    <span>{{ record[0].address.street }} {{ record[0].address.number }}, {{ record[0].address.zip }},
+    {{ record[0].address.city }}</span><br/>
+    <span>{{ record[0].mail }}</span>
+    <span>{{ record[0].phone }}</span>
+  </div>
+</div>
+
+<div class="add-record"><span><i class="fa fa-plus"></i> Add Record</span></div>

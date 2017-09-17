@@ -6,7 +6,6 @@ import { LoginComponent } from './login/login.component';
 import { ParticlesModule } from 'angular-particle';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {RouterModule, Routes} from '@angular/router';
-import { NavbarComponent } from './navbar/navbar.component';
 import { RecordsComponent } from './records/records.component';
 import { ProfileDataComponent } from './profile-data/profile-data.component';
 import {HttpModule} from '@angular/http';
@@ -24,7 +23,6 @@ const appRoutes: Routes = [
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    NavbarComponent,
     RecordsComponent,
     ProfileDataComponent
   ],

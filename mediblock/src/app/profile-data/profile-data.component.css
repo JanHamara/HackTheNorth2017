@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+.fullsize {
+  width: 100%;
+  height: 100%;
+}
+.nobound {
+  margin: 0%;
+  padding: 0%;
+}
+.p-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@-webkit-keyframes load {
+  0% {
+    width: 0%;
+  }
+  15% {
+    width: 0%;
+  }
+  30% {
+    width: 5%;
+  }
+  100% {
+    width: 40%;
+  }
+}
+@keyframes load {
+  0% {
+    width: 0%;
+  }
+  15% {
+    width: 0%;
+  }
+  30% {
+    width: 5%;
+  }
+  100% {
+    width: 40%;
+  }
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background-image: url("assets/background.png");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-family: 'Comfortaa', cursive;
+  color: rgba(255, 255, 255, 0.9);
+  z-index: -2;
+}
+.profile-data {
+  width: 100%;
+  height: 100%;
+  height: 80%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px rgba(255, 255, 255, 0.9) solid;
+  border-radius: 7px;
+  padding: 1%;
+}
+.profile-data img {
+  display: block;
+  width: 30%;
+  margin: auto;
+  opacity: 0.8;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.profile-data h2 {
+  border-bottom: 1px rgba(255, 255, 255, 0.9) solid;
+  width: 80%;
+  margin: auto;
+  padding-bottom: 5%;
+}
+.profile-data div {
+  text-align: center;
+  margin: 8% auto;
+}
+.profile-data span {
+  display: block;
+  margin-bottom: 2%;
+}
+.add-record {
+  width: 50%;
+  height: 10%;
+  margin: 4% auto;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px rgba(255, 255, 255, 0.9) solid;
+  border-radius: 7px;
+  padding: 1%;
+  position: relative;
+}
+.add-record:hover {
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+.add-record span {
+  width: 100%;
+  text-align: center;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.add-record span .fa-plus {
+  margin-right: 2%;
+}

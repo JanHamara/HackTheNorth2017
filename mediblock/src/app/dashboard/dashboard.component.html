@@ -1,7 +1,17 @@
 <div class="row header">
-  <app-navbar></app-navbar>
+  <nav>
+    <img src="../../assets/medilink2_logo_white.png" alt="logo">
+    <h3>medlink</h3>
+    <form>
+      <input type="text" name="search" class="form-control" [(ngModel)]="searchterm" placeholder="Search..." />
+    </form>
+    <div class="profile-button button pull-right"><span>E820318</span><img src="../../assets/profile-picture.jpg" class="img-circle pull-right" alt="profile-picture">
+    </div>
+    <div class="add-button button pull-right"><i class="fa fa-plus"></i> Add Patient</div>
+  </nav>
 </div>
-<div class="row patient-content">
+
+<div class="row patient-content" *ngIf="searchterm">
   <div class="col-lg-8 patient-record">
     <app-records></app-records>
   </div>

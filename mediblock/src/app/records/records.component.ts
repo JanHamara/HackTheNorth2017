@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
@@ -9,6 +9,7 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 export class RecordsComponent implements OnInit {
   recordsObservable: FirebaseListObservable<any[]>;
   records: any;
+  @Input() data;
 
   constructor(db: AngularFireDatabase) {
     this.recordsObservable = db.list('/patients/0019203847528/records');
