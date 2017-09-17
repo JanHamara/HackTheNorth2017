@@ -22,7 +22,8 @@ export class RecordsComponent implements OnInit {
   }
 
   openRecord() {
-
+    document.getElementById('patient-content').style.display = 'none';
+    document.getElementById('report').style.display = 'block';
   };
 
 }

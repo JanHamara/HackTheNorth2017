@@ -178,10 +178,11 @@
   }
 
   #report {
+    display: none;
     .p-center;
-    top: 62%;
+    top: 90%;
     width: 97%;
-    height: 90%;
+    height: auto;
     background: rgba(255, 255, 255, 0.1);
     border: 1px @main-font-color solid;
     border-radius: 7px;
@@ -197,6 +198,10 @@
         top: 1%;
         left: 99%;
         font-size: 140%;
+
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
 
@@ -210,6 +215,10 @@
       th, td {
         text-align: center;
         padding: 1%;
+      }
+
+      th {
+        background: rgba(255, 255, 255, 0.2);;
       }
     }
   }

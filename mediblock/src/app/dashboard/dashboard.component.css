@@ -213,13 +213,14 @@ html {
   cursor: pointer;
 }
 #dashboard #report {
+  display: none;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  top: 62%;
+  top: 90%;
   width: 97%;
-  height: 90%;
+  height: auto;
   background: rgba(255, 255, 255, 0.1);
   border: 1px rgba(255, 255, 255, 0.9) solid;
   border-radius: 7px;
@@ -240,6 +241,9 @@ html {
   left: 99%;
   font-size: 140%;
 }
+#dashboard #report .absolute i.fa-close:hover {
+  cursor: pointer;
+}
 #dashboard #report table {
   background: rgba(255, 255, 255, 0.1);
   width: 90%;
@@ -251,4 +255,7 @@ html {
 #dashboard #report table td {
   text-align: center;
   padding: 1%;
+}
+#dashboard #report table th {
+  background: rgba(255, 255, 255, 0.2);
 }

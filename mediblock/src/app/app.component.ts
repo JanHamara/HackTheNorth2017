@@ -131,6 +131,7 @@ export class AppComponent implements OnInit {
       'bottom': 0,
     };
 
+
     this.params = {
       'particles': {
         'number': {

@@ -99,6 +99,29 @@
           <td>{{ report[1][1].date }}</td>
           <td>{{ report[1][1].place }}</td>
         </tr>
+        <tr>
+          <th colspan="5">Factors Control & Health Preview</th>
+        </tr>
+        <tr>
+          <th>Heartrate</th>
+          <th>Blood Pressure</th>
+          <th>External symptoms</th>
+          <th>Internal Symptoms</th>
+          <th>Breath</th>
+        </tr>
+        <tr>
+          <th>{{ report[1][1].data.pulse }}</th>
+          <th>{{ report[1][1].data.bloodpressure }}</th>
+          <th>{{ report[1][1].data.extSymptoms }}</th>
+          <th>{{ report[1][1].data.intSymptoms }}</th>
+          <th>{{ report[1][1].data.breath }}</th>
+        </tr>
+        <tr>
+          <th colspan="5">Diagnosis</th>
+        </tr>
+        <tr>
+          <td colspan="5">{{ report[1][1].data.diagnosis }}</td>
+        </tr>
       </table>
     </div>
   </div>

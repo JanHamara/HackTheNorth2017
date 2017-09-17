@@ -37,7 +37,7 @@ export class DashboardComponent implements OnInit {
 
     this.reportObservable.subscribe((response) => {
       this.report = response;
-      console.log('Repoooort:', this.report[0]);
+      console.log('Repoooort:', this.report[1][1]);
     });
   }
 
@@ -75,6 +75,7 @@ export class DashboardComponent implements OnInit {
   }
 
   closeReport() {
-
+    document.getElementById('patient-content').style.display = 'block';
+    document.getElementById('report').style.display = 'none';
   }
 }
