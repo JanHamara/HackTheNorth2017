@@ -38,9 +38,11 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+
     this.recordsObservable.subscribe((response) => {
       this.records = response;
     });
+
       // Checking if Web3 has been injected by the browser (Mist/MetaMask)
       if (typeof this.web3 !== 'undefined') {
         console.warn('Using web3 detected from external source. ' +
@@ -119,7 +121,7 @@ export class AppComponent implements OnInit {
 
 
     this.style = {
-      'position': 'fixed',
+      'position': 'relative',
       'width': '100%',
       'height': '100%',
       'z-index': -0.5,

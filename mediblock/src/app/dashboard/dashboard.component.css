@@ -56,26 +56,35 @@ html {
   color: rgba(255, 255, 255, 0.9);
   z-index: -2;
 }
-.header {
+#dashboard {
+  width: 100%;
+  height: 100%;
+  width: 95%;
+  margin: auto;
+  position: absolute;
+  top: 0%;
+  display: none;
+}
+#dashboard .header {
   height: 15%;
 }
-#patient-content {
+#dashboard #patient-content {
   height: 85%;
 }
-#patient-content .patient-record,
-#patient-content .patient-data {
+#dashboard #patient-content .patient-record,
+#dashboard #patient-content .patient-data {
   height: 100%;
   margin-top: 2%;
 }
-nav {
+#dashboard nav {
   border-bottom: 1px rgba(255, 255, 255, 0.9) solid;
   padding: 1%;
 }
-nav img {
+#dashboard nav img {
   display: inline-block;
   width: 5%;
 }
-nav h3 {
+#dashboard nav h3 {
   display: inline-block;
   margin: 0%;
   padding: 0%;
@@ -85,11 +94,11 @@ nav h3 {
   border-right: 1px rgba(255, 255, 255, 0.9) solid;
   margin-left: -1%;
 }
-nav form {
+#dashboard nav form {
   display: inline-block;
   width: 40%;
 }
-nav form input {
+#dashboard nav form input {
   color: rgba(255, 255, 255, 0.9);
   width: 100%;
   background: none;
@@ -98,33 +107,33 @@ nav form input {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-nav form input:focus {
+#dashboard nav form input:focus {
   outline: none;
   border: none;
 }
-nav form input::placeholder {
+#dashboard nav form input::placeholder {
   color: rgba(255, 255, 255, 0.9);
 }
-nav .add-button {
+#dashboard nav .add-button {
   width: 13%;
   display: inline-block;
   background: none;
 }
-nav .add-button .fa-plus {
+#dashboard nav .add-button .fa-plus {
   padding-right: 8%;
 }
-nav .profile-button {
+#dashboard nav .profile-button {
   width: 10%;
   display: inline-block;
   background: none;
   margin-left: 1%;
   padding: 0;
 }
-nav .profile-button img {
+#dashboard nav .profile-button img {
   margin: 0% 2%;
   width: 20%;
 }
-nav .button {
+#dashboard nav .button {
   color: rgba(255, 255, 255, 0.9);
   margin-top: 0.5%;
   text-align: center;
@@ -132,22 +141,22 @@ nav .button {
   border: 1px rgba(255, 255, 255, 0.9) solid;
   border-radius: 7px;
 }
-nav .button:hover {
+#dashboard nav .button:hover {
   cursor: pointer;
   background: rgba(250, 250, 250, 0.3);
 }
-.loading {
+#dashboard .loading {
   width: 100%;
   height: 100%;
 }
-.loading .fa-spinner {
+#dashboard .loading .fa-spinner {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 400%;
 }
-#add-patient {
+#dashboard #add-patient {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -161,44 +170,44 @@ nav .button:hover {
   border-radius: 7px;
   padding: 10%;
 }
-#add-patient .absolute {
+#dashboard #add-patient .absolute {
   position: relative;
   width: 100%;
   height: 100%;
 }
-#add-patient .absolute h3 {
+#dashboard #add-patient .absolute h3 {
   margin-top: -5%;
 }
-#add-patient .absolute input {
+#dashboard #add-patient .absolute input {
   text-align: center;
-  margin-top: 5%;
+  margin-top: 10%;
   background: none;
   border: none;
   border-bottom: 1px rgba(255, 255, 255, 0.9) solid;
 }
-#add-patient .absolute input:focus {
+#dashboard #add-patient .absolute input:focus {
   outline: none;
 }
-#add-patient .absolute i.fa-close {
+#dashboard #add-patient .absolute i.fa-close {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  top: -120%;
+  top: -100%;
   left: 125%;
   font-size: 130%;
 }
-#add-patient .absolute i.fa-close:hover {
+#dashboard #add-patient .absolute i.fa-close:hover {
   cursor: pointer;
 }
-#add-patient .absolute div {
+#dashboard #add-patient .absolute div {
   margin-top: 10%;
 }
-#add-patient .absolute div i {
+#dashboard #add-patient .absolute div i {
   font-size: 150%;
   opacity: 0.8;
 }
-#add-patient .absolute div i:hover {
+#dashboard #add-patient .absolute div i:hover {
   font-size: 140%;
   opacity: 1;
   cursor: pointer;
