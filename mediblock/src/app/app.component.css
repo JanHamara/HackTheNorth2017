@@ -170,5 +170,5 @@ html {
   height: 100%;
   opacity: 0;
   animation: showlogin 1s forwards;
-  animation-delay: 0s;
+  animation-delay: 4s;
 }
