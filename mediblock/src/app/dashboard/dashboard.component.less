@@ -6,7 +6,7 @@
   height: 15%;
 }
 
-.patient-content {
+#patient-content {
   height: 85%;
 
   .patient-record, .patient-data {
@@ -105,3 +105,45 @@ nav {
     font-size: 400%;
   }
 }
+
+#add-patient {
+  .p-center;
+  display: none;
+
+  width: 50%;
+  height: 50%;
+  margin: 4% auto;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px @main-font-color solid;
+  border-radius: 7px;
+  padding: 10%;
+
+  .absolute {
+    position: relative;
+    .fullsize;
+
+    input {
+      text-align: center;
+      margin-top: 5%;
+      background: none;
+      border: none;
+      border-bottom: 1px @main-font-color solid;
+
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    i.fa-close {
+      .p-center;
+      top: -170%;
+      left: 125%;
+
+      font-size: 130%;
+    }
+  }
+
+}
+
+

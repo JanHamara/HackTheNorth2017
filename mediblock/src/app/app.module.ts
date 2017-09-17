@@ -13,6 +13,7 @@ import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { ModalModule } from 'ngx-bootstrap';
 
 const appRoutes: Routes = [
   { path: 'dashboard', component: DashboardComponent }
@@ -37,7 +38,8 @@ const appRoutes: Routes = [
     ),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule, // imports firebase/database, only needed for database features
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

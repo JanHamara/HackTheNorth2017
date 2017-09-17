@@ -1,4 +1,6 @@
-import {Component, OnInit, OnChanges, Input} from '@angular/core';
+import {Component, OnInit, TemplateRef} from '@angular/core';
+import { BsModalService } from 'ngx-bootstrap/modal';
+import { BsModalRef } from 'ngx-bootstrap/modal/modal-options.class';
 import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
 
 @Component({
@@ -9,12 +11,15 @@ import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database
 export class DashboardComponent implements OnInit {
   searchterm: string;
   searchstate = 'empty';
-  patients: String[] = [];
+  patients: string[] = [];
+  patientName: string;
+  patientId: string;
 
   recordsObservable: FirebaseListObservable<any[]>;
   records: any;
 
-  constructor(db: AngularFireDatabase) {
+
+  constructor(db: AngularFireDatabase, private modalService: BsModalService) {
     this.recordsObservable = db.list('/patients');
   }
 
@@ -23,10 +28,10 @@ export class DashboardComponent implements OnInit {
       this.records = response;
       this.records.forEach((record) => {
         this.patients.push(record.patientData.firstName);
-        this.patients.push(record.patientData.secondName);
       });
     });
   }
+
   search() {
     if (this.searchterm == null) {
       this.searchstate = 'empty';
@@ -37,9 +42,15 @@ export class DashboardComponent implements OnInit {
       this.patients.forEach((patient) => {
         if (patient === this.searchterm) {
           this.searchstate = 'found';
+          this.patientName = patient;
         }
       })
     }
+  }
+
+  addPatient() {
+    document.getElementById('add-patient').style.display = 'block';
+    document.getElementById('patient-content').style.display = 'none';
   }
 
 }

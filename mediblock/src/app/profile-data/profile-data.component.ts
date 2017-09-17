@@ -9,7 +9,6 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 export class ProfileDataComponent implements OnInit {
   recordsObservable: FirebaseListObservable<any[]>;
   record: any;
-  @Input() data;
 
   constructor(db: AngularFireDatabase) {
     this.recordsObservable = db.list('/patients/0019203847528');
@@ -18,6 +17,7 @@ export class ProfileDataComponent implements OnInit {
   ngOnInit() {
     this.recordsObservable.subscribe((response) => {
       this.record = response;
+      console.log('wefwef: ', this.record);
     });
   }
 
