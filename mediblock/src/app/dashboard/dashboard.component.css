@@ -196,7 +196,10 @@ nav .button:hover {
 }
 #add-patient .absolute div i {
   font-size: 150%;
+  opacity: 0.8;
 }
 #add-patient .absolute div i:hover {
+  font-size: 140%;
+  opacity: 1;
   cursor: pointer;
 }

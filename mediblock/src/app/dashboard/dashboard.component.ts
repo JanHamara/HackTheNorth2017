@@ -57,10 +57,12 @@ export class DashboardComponent implements OnInit {
   closeAddPatient() {
     document.getElementById('add-patient').style.display = 'none';
     document.getElementById('patient-content').style.display = 'block';
+    this.newPatientId = '';
   }
 
   postPatient() {
     const patientsArray = this.db.list('/patients/' + this.newPatientId);
     patientsArray.push({patientData: '', records: ''});
+    this.closeAddPatient();
   }
 }
