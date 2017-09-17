@@ -8,7 +8,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import {RouterModule, Routes} from '@angular/router';
 import { RecordsComponent } from './records/records.component';
 import { ProfileDataComponent } from './profile-data/profile-data.component';
-import {HttpModule} from '@angular/http';
+import { HttpModule } from '@angular/http';
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
