@@ -14,12 +14,13 @@ export class DashboardComponent implements OnInit {
   patients: string[] = [];
   patientName: string;
   patientId: string;
+  newPatientId: any;
 
   recordsObservable: FirebaseListObservable<any[]>;
   records: any;
 
 
-  constructor(db: AngularFireDatabase, private modalService: BsModalService) {
+  constructor(public db: AngularFireDatabase, private modalService: BsModalService) {
     this.recordsObservable = db.list('/patients');
   }
 
@@ -53,4 +54,13 @@ export class DashboardComponent implements OnInit {
     document.getElementById('patient-content').style.display = 'none';
   }
 
+  closeAddPatient() {
+    document.getElementById('add-patient').style.display = 'none';
+    document.getElementById('patient-content').style.display = 'block';
+  }
+
+  postPatient() {
+    const patientsArray = this.db.list('/patients/' + this.newPatientId);
+    patientsArray.push({patientData: '', records: ''});
+  }
 }

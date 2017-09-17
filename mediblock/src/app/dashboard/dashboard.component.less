@@ -122,25 +122,46 @@ nav {
     position: relative;
     .fullsize;
 
-    input {
-      text-align: center;
-      margin-top: 5%;
-      background: none;
-      border: none;
-      border-bottom: 1px @main-font-color solid;
-
-
-      &:focus {
-        outline: none;
-      }
+    h3 {
+      margin-top: -5%;
     }
+
+      input {
+        text-align: center;
+        margin-top: 5%;
+        background: none;
+        border: none;
+        border-bottom: 1px @main-font-color solid;
+
+
+        &:focus {
+          outline: none;
+        }
+      }
+
 
     i.fa-close {
       .p-center;
-      top: -170%;
+      top: -120%;
       left: 125%;
 
       font-size: 130%;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    div {
+      margin-top: 10%;
+
+      i {
+        font-size: 150%;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
     }
   }
 

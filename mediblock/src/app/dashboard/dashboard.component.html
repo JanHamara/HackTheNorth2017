@@ -27,8 +27,13 @@
 
 <div id="add-patient" class="fadeIn animated text-center">
   <div class="absolute">
-    <i class="fa fa-close"></i>
+    <i class="fa fa-close" (click)="closeAddPatient()"></i>
+
     <h3>Enter Medlink ID</h3>
-    <input type="text" name="patientID">
+    <input type="text" name="patientId" [(ngModel)]="newPatientId">
+
+    <div (click)="postPatient()">
+    <i class="fa fa-paper-plane"></i>
+    </div>
   </div>
 </div>
