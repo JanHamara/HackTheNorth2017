@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpService} from '../shared/http-service/http.service';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
@@ -11,7 +10,7 @@ export class RecordsComponent implements OnInit {
   recordsObservable: FirebaseListObservable<any[]>;
   records: any;
 
-  constructor(private httpService: HttpService, db: AngularFireDatabase) {
+  constructor(db: AngularFireDatabase) {
     this.recordsObservable = db.list('/patients');
   }
 
